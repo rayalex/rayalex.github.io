@@ -6,9 +6,6 @@ date:   2018-01-02
 categories: csharp memoization functional-programming
 ---
 
-
-# Functions and memoization #
-
 While C# is not necessarily a functional language, language constructs such as [Func<>](https://docs.microsoft.com/en-us/dotnet/api/?view=netstandard-2.0&term=Func) and [Action<>](https://docs.microsoft.com/en-us/dotnet/api/?view=netstandard-2.0&term=action) became first-class citizens, making it much easier to write functional style code in C#.
 
 <!--more-->
