@@ -64,7 +64,7 @@ This will make sure all requests to `/actuator` endpoints are not authenticated,
 
 ## Testing JWT
 
-Great thing about testing in Spring is that you can decide how much of the application you want to test. You can test just the controller, or you can test the whole application. I my case I just wanted to test the controller, so I used `@WebMvcTest` annotation to test just the controller. I won't go into specifics of how to test the controller itself, but I'll show how to test JWT part. For start, here's the simple sample test:
+Great thing about testing in Spring is that you can decide how much of the application you want to test. You can test just the controller, or you can test the whole application. I my case I just wanted to test the controller, so I used `@WebMvcTest` annotation. For start, here's the simple sample test:
 
 ```kotlin
 @WebMvcTest(TestController::class)
