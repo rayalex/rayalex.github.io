@@ -157,4 +157,4 @@ fun `admin endpoint should return 200`() {
 
 And that's it. We can now easily test our JWT authentication and authorization in our controller tests.
 
-Until next time :peace_symbol:
+Until next time ✌️
