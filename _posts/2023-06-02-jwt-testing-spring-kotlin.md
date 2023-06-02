@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title:  "Testing JWT in Spring Boot with Kotlin"
-date:   2022-10-29
+date:   2023-06-02
 categories: spring-boot kotlin jwt testing
 ---
 
