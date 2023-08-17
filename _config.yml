@@ -127,7 +127,7 @@ author:
       url: "https://github.com/rayalex"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/iseedeadselfies"
+      # url: "https://instagram.com/iseedeadselfies"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/aleksandar-dragojevic"
