@@ -70,10 +70,10 @@ This will make sure all requests to `/actuator` endpoints are not authenticated,
 Great thing about testing in Spring is that you can decide how much of the application you want to test. You can test just the controller, or you can test the whole application. I my case I just wanted to test the controller, so I used `@WebMvcTest` annotation. For start, here's the simple sample test:
 
 ```kotlin
-@WebMvcTest(TestController::class)
+@WebMvcTest(SampleController::class)
 @Import(SecurityConfiguration::class)
 @WithMockJwtUser
-class DatabaseControllerTest {
+class SampleControllerTest {
     @Autowired
     lateinit var mockMvc: MockMvc
 }
