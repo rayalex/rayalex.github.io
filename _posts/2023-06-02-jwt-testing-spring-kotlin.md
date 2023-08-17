@@ -4,6 +4,8 @@ classes: wide
 title:  "Testing JWT authentication in Spring Boot and Kotlin"
 date:   2023-06-02
 categories: spring-boot kotlin jwt testing
+header:
+    image: /assets/images/spring-jwt-kotlin.jpg
 ---
 
 I _love_ automated tests. While I'm not really a TDD fan in most cases (I prefer to write tests after the code is written), I still find them invaluable. They help me to understand the code better, and they help me to refactor it with confidence. But the main point is that I'm usually too lazy to test things manually, and on my personal projects I prefer to dedicate the time I have to writing new features, not testing the old ones. While working on one of my recent personal projects I decided to use JWT for authentication, and I wanted to test it properly in Web layer. So, here's how I did it.
