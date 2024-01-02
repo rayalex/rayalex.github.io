@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title:  "Using OSO Authorization Framework with SpringBoot & SpringSecurity"
-date:   2023-06-02
+date:   2024-01-02
 categories: spring-boot spring-security kotlin oso polar
 header:
     overlay_image: /assets/images/spring-security-with-oso.jpg
