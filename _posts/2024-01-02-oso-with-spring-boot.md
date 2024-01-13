@@ -17,17 +17,17 @@ It kept getting the message: "You do not have the bear-er token!"
 Now that we have that out of the way, let's get to the real stuff. In this post, we will see how to use the [OSO Authorization Framework](https://www.osohq.com/) with SpringBoot and SpringSecurity. We will be using Kotlin for this example, but the same can be done with Java as well.
 
 **Note**
-As of the end of 2023 OsoHQ has decided to [deprecate the open-source version](https://github.com/osohq/oso?tab=readme-ov-file#deprecated) of the Oso Authorization Framework. Parts of this post were written before this announcement and hence I've decided to publish it, since it still somewhat applies to the commercial (cloud) version of the framework.
+As of the end of 2023 OsoHQ has decided to [deprecate the open-source version](https://github.com/osohq/oso?tab=readme-ov-file#deprecated) of the Oso Authorization Framework. Parts of this post were written before this announcement and therefore I've decided to publish it as it might help someone who's still looking to use OSS version of Oso.
 
 In the future I might either write my own simple authorization framework or leverage the Oso in its commercial form. Currently my project is a Modular Monolith and doesn't really require anything complex.
 
 ## What is OSO?
 
-Oso (in its open-source form) is a library that allows you to define authorization rules in a simple, declarative language called [Polar](https://www.osohq.com/docs/reference/polar/syntax). It is a powerful language that allows you to define complex authorization rules in a very simple way. It is also very easy to integrate with your application. We can use this language to model authorization rules in RBAC, ReBAC, ABAC and other models.
+Oso (in its open-source form) is a library that allows you to define authorization rules in a simple, declarative language called [Polar](https://www.osohq.com/docs/reference/polar/syntax). It is a powerful language that allows you to define complex authorization rules in a very simple way. It is also very easy to integrate with your application. We can use this language to model authorization rules in [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control), [ReBAC](https://en.wikipedia.org/wiki/Relationship-based_access_control), [ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control) and other models.
 
 Here's a short example of a Polar rule:
 
-```polar
+```swift
 actor User {}
 
 resource Organization {
@@ -67,9 +67,9 @@ There's no out of the box way to integrate Oso with SpringSecurity, but we can l
 
 ### Prerequisites
 
-Let's start by setting up a simple landscape application model. In our case we'll have `User`s, `Organization`s and `Repository`s. A `User` can be a member of multiple `Organization`s and a `Repository` can belong to only one `Organization`. A `User` can have different roles in different `Organization`s. 
+Let's start by setting up a simple landscape application model. In our case we'll have `User`, `Organization` and `Repository`. A `User` can be a member of multiple `Organization`s and a `Repository` can belong to only one `Organization`. A `User` can have different roles in different `Organization`s. 
 
-### Registering Java classes with Oso
+### Registering Java/Kotlin classes with Oso
 
 Oso requires us to register the Java classes that we want to use in the Polar rules. We can do this by using the `registerClass` method on the `Oso` object. Let's create a simple configuration class to do this and also return an instance of `Oso` when needed:
 
@@ -230,6 +230,6 @@ class RepositoryController(private val repositoryService: RepositoryService) {
 ```
 
 ### Conclusion
-In this post, we saw how to integrate the OSO Authorization Framework with SpringSecurity. We used Kotlin for this example, but the same can be done with Java as well. It's also possible to use the same approach to integrate other authorization frameworks with SpringSecurity due to its extensibility.
+In this post, we saw how to integrate the Oso Authorization Framework with SpringSecurity. It's also possible to use the same approach to integrate other authorization frameworks with SpringSecurity due to its extensibility.
 
 The complete code for this example will be published later on my GitHub. I'll update this post with the link once it's published.
