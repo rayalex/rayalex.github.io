@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: wide
-title:  "Using OSO Authorization Framework with SpringBoot & SpringSecurity"
+title:  "Integrating Oso Authorization Framework with SpringBoot & SpringSecurity"
 date:   2024-01-02
 categories: spring-boot spring-security kotlin oso polar
 header:
