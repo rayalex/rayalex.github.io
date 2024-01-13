@@ -17,11 +17,11 @@ It kept getting the message: "You do not have the bear-er token!"
 Now that we have that out of the way, let's get to the real stuff. In this post, we will see how to use the [OSO Authorization Framework](https://www.osohq.com/) with SpringBoot and SpringSecurity. We will be using Kotlin for this example, but the same can be done with Java as well.
 
 **Note**
-As of the end of 2023 OsoHQ has decided to [deprecate the open-source version](https://github.com/osohq/oso?tab=readme-ov-file#deprecated) of the Oso Authorization Framework. Parts of this post were written before this announcement and therefore I've decided to publish it as it might help someone who's still looking to use OSS version of Oso.
+> As of the end of 2023 OsoHQ has decided to [deprecate the open-source version](https://github.com/osohq/oso?tab=readme-ov-file#deprecated) of the Oso Authorization Framework. Parts of this post were written before this announcement and therefore I've decided to publish it as it might help someone who's still looking to use OSS version of Oso.
 
-In the future I might either write my own simple authorization framework or leverage the Oso in its commercial form. Currently my project is a Modular Monolith and doesn't really require anything complex.
+> In the future I might either write my own simple authorization framework or leverage the Oso in its commercial form. Currently my project is a Modular Monolith and doesn't really require anything complex.
 
-## What is OSO?
+## What is Oso?
 
 Oso (in its open-source form) is a library that allows you to define authorization rules in a simple, declarative language called [Polar](https://www.osohq.com/docs/reference/polar/syntax). It is a powerful language that allows you to define complex authorization rules in a very simple way. It is also very easy to integrate with your application. We can use this language to model authorization rules in [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control), [ReBAC](https://en.wikipedia.org/wiki/Relationship-based_access_control), [ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control) and other models.
 
